@@ -1,8 +1,12 @@
+
+
 const fs = require('fs');
 const puppeteer = require('puppeteer'); // v23.0.0 or later
 
 (async () => {
-    const browser = await puppeteer.launch();
+const browser = await puppeteer.launch({
+  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+});
     const page = await browser.newPage();
     const timeout = 5000;
     page.setDefaultTimeout(timeout);
