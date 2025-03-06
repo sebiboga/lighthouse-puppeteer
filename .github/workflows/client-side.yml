@@ -17,19 +17,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.x'
+      # Step 2: Set up Node.js puppeteer and lighthouse
+      
 
-      # Step 3: Install dependencies
-      - name: Install dependencies
-        run: npm install
-
-      # Step 4: Run the Puppeteer script
-      - name: Run Puppeteer and Lighthouse script
-        run: node your-script-file.js
 
       # Step 5: Upload Lighthouse report (optional)
       - name: Upload Lighthouse report
